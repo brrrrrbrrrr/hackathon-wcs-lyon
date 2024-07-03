@@ -8,9 +8,10 @@ const openai = new OpenAI({ apiKey: process.env.API_OPENAI_KEY });
 
 function createCompletion(req, res) {
   const question = req.body;
+  console.log('questions controller :', question);
   const message = `"Évaluez la question suivante pour déterminer si elle est inclusive et autorisée dans le cadre d'un entretien d'embauche :
 
-[${question}]
+[${question.question}]
 
 Critères à considérer :
 
@@ -47,9 +48,5 @@ Critères à considérer :
       }
     });
 }
-
-// const createCompletion = (req, res) => {
-//   return console.log('je passe');
-// };
 
 export default createCompletion;
