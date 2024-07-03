@@ -1,5 +1,5 @@
 import './App.css';
-import Prompt from './components/Prompt';
+import Prompt from './components/Prompt.jsx';
 import Questions from './components/Questions.jsx';
 
 function App() {
