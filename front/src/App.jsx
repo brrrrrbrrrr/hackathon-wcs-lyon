@@ -1,7 +1,14 @@
 import './App.css';
+import Prompt from './components/Prompt';
+import Questions from './components/Questions.jsx';
 
 function App() {
-  return <>HACKATHON</>;
+  return (
+    <>
+      <Prompt />
+      <Questions />
+    </>
+  );
 }
 
 export default App;
