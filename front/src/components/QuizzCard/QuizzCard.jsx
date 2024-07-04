@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { useState } from 'react';
-import questions from './Questions.js';
+import questions from '../Questions.js';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import DangerousIcon from '@mui/icons-material/Dangerous';
 import styles from '../../components/QuizzCard/QuizzCard.module.css';
