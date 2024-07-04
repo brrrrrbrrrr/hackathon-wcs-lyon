@@ -1,0 +1,30 @@
+.h4-question.correct {
+    color: green;
+  }
+  
+  .h4-question.incorrect {
+    color: red;
+  }
+  
+  .navigation-buttons {
+    margin-top: 20px;
+  }
+  
+  .navigation-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .question-container {
+    margin-bottom: 20px;
+  }
+  
+  .question-item {
+    margin-bottom: 10px;
+  }
+  

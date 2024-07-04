@@ -38,6 +38,8 @@ const router = createBrowserRouter([
         path: '/data',
         element: <Data />,
       },
+
+      
     ],
   },
 ]);
