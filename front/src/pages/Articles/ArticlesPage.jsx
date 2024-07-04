@@ -1,7 +1,14 @@
-import React from 'react';
+import ArticleCard from "../../components/ArticleCard/ArticleCard"
+import styles from "../../pages/Articles/ArticlesPage"
 
-const ArticlesPage = (props) => {
-  return <div></div>;
+const ArticlesPage = () => {
+  return (
+  
+  <div className={styles.backgroundArticles}>
+    <h1>NOS ACTUS</h1>
+    <ArticleCard/>
+  </div>
+  )
+  
 };
-
 export default ArticlesPage;
