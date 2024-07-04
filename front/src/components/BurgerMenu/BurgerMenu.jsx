@@ -1,4 +1,4 @@
-export default function DataLittleCard () {
+export default function BurgerMenu () {
 
     return (
         <>
