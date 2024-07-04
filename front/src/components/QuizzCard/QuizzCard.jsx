@@ -59,7 +59,7 @@ const QuizzCard = () => {
   return (
     <div>
       {score === null ? (
-        <div className={styles.question-container}>
+        <div className={styles.question_container}>
           <h4
             className={`h4-question ${
               validationStates[currentQuestionIndex] === true
@@ -79,7 +79,7 @@ const QuizzCard = () => {
             onClick={() => handleValidation(false)}
             style={{ cursor: 'pointer', color: 'red' }}
           />
-          <div className={styles.navigation-buttons}>
+          <div className={styles.navigation_buttons}>
             <button
               onClick={prevQuestion}
               disabled={currentQuestionIndex === 0}
@@ -100,7 +100,7 @@ const QuizzCard = () => {
           </p>
           <ul>
             {questions.map((el, index) => (
-              <li key={index} className={styles.question-item}>
+              <li key={index} className={styles.question_item}>
                 <h4
                   className={`h4-question ${
                     validationStates[index] === true
@@ -113,7 +113,7 @@ const QuizzCard = () => {
                   {el.question}
                 </h4>
                 {incorrectQuestions.includes(index) && (
-                  <p className={styles.error-message}>Réponse incorrecte</p>
+                  <p className={styles.error_message}>Réponse incorrecte</p>
                 )}
               </li>
             ))}
