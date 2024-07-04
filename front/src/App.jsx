@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-      {hideHeaderFooter === false && <Header />}
       <main>
         <BurgerMenu />
+        {hideHeaderFooter === false && <Header />}
         <Outlet />
       </main>
       {hideHeaderFooter === false && <Footer />}
