@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import questions from '../Questions.js';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import DangerousIcon from '@mui/icons-material/Dangerous';
@@ -57,28 +58,47 @@ const QuizzCard = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div>
+    <div className={styles.question_container}>
       {score === null ? (
-        <div className={styles.question_container}>
-          <h4
-            className={`h4-question ${
-              validationStates[currentQuestionIndex] === true
-                ? 'correct'
-                : validationStates[currentQuestionIndex] === false
-                ? 'incorrect'
-                : ''
-            }`}
-          >
-            {currentQuestion.question}
-          </h4>
-          <DoneOutlineIcon
-            onClick={() => handleValidation(true)}
-            style={{ cursor: 'pointer', color: 'green' }}
-          />
-          <DangerousIcon
-            onClick={() => handleValidation(false)}
-            style={{ cursor: 'pointer', color: 'red' }}
-          />
+        <AnimatePresence>
+          {questions
+            .slice(0, currentQuestionIndex + 1)
+            .map((question, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className={`${styles.question} ${
+                  index % 2 === 0 ? styles.question_left : styles.question_right
+                }`}
+              >
+                <h4
+                  className={`h4-question ${
+                    validationStates[index] === true
+                      ? 'correct'
+                      : validationStates[index] === false
+                      ? 'incorrect'
+                      : ''
+                  }`}
+                >
+                  {question.question}
+                </h4>
+                {index === currentQuestionIndex && (
+                  <div className={styles.icons}>
+                    <DoneOutlineIcon
+                      onClick={() => handleValidation(true)}
+                      style={{ cursor: 'pointer', color: 'green' }}
+                    />
+                    <DangerousIcon
+                      onClick={() => handleValidation(false)}
+                      style={{ cursor: 'pointer', color: 'red' }}
+                    />
+                  </div>
+                )}
+              </motion.div>
+            ))}
           <div className={styles.navigation_buttons}>
             <button
               onClick={prevQuestion}
@@ -92,7 +112,7 @@ const QuizzCard = () => {
               <button onClick={validateAnswers}>Valider les réponses</button>
             )}
           </div>
-        </div>
+        </AnimatePresence>
       ) : (
         <div>
           <p>
