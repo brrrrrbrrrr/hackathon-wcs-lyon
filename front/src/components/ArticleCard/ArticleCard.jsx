@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import {imageArticle} from "../../assets/images/2peoples.jpg"
+import imageArticle from "../../assets/images/2peoples.jpg"
 import styles from "../ArticleCard/ArticleCard.module.css"
 
 
