@@ -76,6 +76,7 @@
   
   button {
     cursor: pointer;
+    background: var(--dark-color);
   
     /* texte */
     font-family: var(--title-font-family);

@@ -1,9 +1,11 @@
 /* eslint-disable no-undef */
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import questions from '../Questions.js';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import DangerousIcon from '@mui/icons-material/Dangerous';
 import styles from '../../components/QuizzCard/QuizzCard.module.css';
+import Prompt from "../Prompt.jsx";
 
 const QuizzCard = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -56,6 +58,13 @@ const QuizzCard = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  const [showPrompt, setShowPrompt] = useState(false); // État pour gérer l'affichage du Prompt
+
+  const handleChange = () => {
+    console.log(showPrompt)
+    setShowPrompt(!showPrompt); // Inverser l'état de showPrompt lorsque le bouton est cliqué
+  };
+
   return (
     <div>
       {score === null ? (
@@ -63,21 +72,21 @@ const QuizzCard = () => {
           <h4
             className={`h4-question ${
               validationStates[currentQuestionIndex] === true
-                ? 'correct'
+                ? "correct"
                 : validationStates[currentQuestionIndex] === false
-                ? 'incorrect'
-                : ''
+                  ? "incorrect"
+                  : ""
             }`}
           >
             {currentQuestion.question}
           </h4>
           <DoneOutlineIcon
             onClick={() => handleValidation(true)}
-            style={{ cursor: 'pointer', color: 'green' }}
+            style={{ cursor: "pointer", color: "green" }}
           />
           <DangerousIcon
             onClick={() => handleValidation(false)}
-            style={{ cursor: 'pointer', color: 'red' }}
+            style={{ cursor: "pointer", color: "red" }}
           />
           <div className={styles.navigation_buttons}>
             <button
@@ -104,10 +113,10 @@ const QuizzCard = () => {
                 <h4
                   className={`h4-question ${
                     validationStates[index] === true
-                      ? 'correct'
+                      ? "correct"
                       : validationStates[index] === false
-                      ? 'incorrect'
-                      : ''
+                        ? "incorrect"
+                        : ""
                   }`}
                 >
                   {el.question}
@@ -118,8 +127,12 @@ const QuizzCard = () => {
               </li>
             ))}
           </ul>
+          <button type="button" onClick={handleChange}>
+            <Link className={styles.link} to="/Prompt">Testez vos questions</Link>
+          </button>
         </div>
       )}
+      <div>{showPrompt === true && <Prompt />}</div>
     </div>
   );
 };
