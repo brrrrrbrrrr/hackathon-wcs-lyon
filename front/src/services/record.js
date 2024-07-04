@@ -2,7 +2,8 @@ const startRecording = (
   setRecording,
   setAudioURL,
   mediaRecorder,
-  audioChunks
+  audioChunks,
+  setResultText
 ) => {
   navigator.mediaDevices
     .getUserMedia({ audio: true })
@@ -28,7 +29,10 @@ const startRecording = (
           body: formData,
         })
           .then((response) => response.json())
-          .then((data) => console.log(data))
+          .then((data) => {
+            setResultText(data);
+            console.log(data);
+          })
           .catch((error) => console.error('Error uploading audio:', error));
       };
 
