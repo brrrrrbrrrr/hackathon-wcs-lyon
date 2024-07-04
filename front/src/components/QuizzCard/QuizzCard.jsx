@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import questions from '../Questions.js';
@@ -8,6 +9,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { IconButton } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
+import Prompt from '../Prompt.jsx';
 
 const QuizzCard = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -57,6 +59,15 @@ const QuizzCard = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
     }
+  };
+
+  const currentQuestion = questions[currentQuestionIndex];
+
+  const [showPrompt, setShowPrompt] = useState(false); // État pour gérer l'affichage du Prompt
+
+  const handleChange = () => {
+    console.log(showPrompt);
+    setShowPrompt(!showPrompt); // Inverser l'état de showPrompt lorsque le bouton est cliqué
   };
 
   return (
@@ -141,8 +152,14 @@ const QuizzCard = () => {
               </li>
             ))}
           </ul>
+          <button type='button' onClick={handleChange}>
+            <Link className={styles.link} to='/Prompt'>
+              Testez vos questions
+            </Link>
+          </button>
         </div>
       )}
+      <div>{showPrompt === true && <Prompt />}</div>
     </div>
   );
 };

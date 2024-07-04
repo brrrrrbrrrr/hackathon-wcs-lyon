@@ -1,11 +1,14 @@
+
 import QuizzCard from "../../components/QuizzCard/QuizzCard.jsx";
 
+
 const QuizzPage = () => {
-  return (
-    <>
-      <QuizzCard />
-    </>
-  );
+
+ return (
+   <div>
+     <QuizzCard />
+   </div>
+ );
 }
 
 export default QuizzPage;
