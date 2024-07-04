@@ -5,7 +5,7 @@ const ArticlesPage = () => {
   return (
   
   <div className={styles.backgroundArticles}>
-    <h1>NOS ACTUS</h1>
+    <h1>NOS <strong> ACTUS</strong></h1>
     <ArticleCard/>
   </div>
   )
