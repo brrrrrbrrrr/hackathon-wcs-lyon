@@ -1,7 +1,12 @@
-import React from 'react';
+import QuizzCard from "../../components/QuizzCard/QuizzCard.jsx";
 
-const QuizzPage = (props) => {
-  return <div></div>;
-};
+const QuizzPage = () => {
+  return (
+    <>
+      <QuizzCard />
+    </>
+  );
+}
 
 export default QuizzPage;
+
