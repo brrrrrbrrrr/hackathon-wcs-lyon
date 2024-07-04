@@ -1,95 +1,89 @@
 /*==========CHARTE GRAPHIQUE==========*/
 
 @font-face {
-    font-family: 'sansation';
-    src: url('./assets//font/sansation/Sansation_Regular.ttf') format('ttf');
-   
-
+  font-family: 'sansation';
+  src: url('./assets//font/sansation/Sansation_Regular.ttf') format('ttf');
 }
 :root {
-    /*COULEURS*/
-    --main-color: #1B3759;
-    --secondary-color: #DAECF9;
-    --accent-color: #C2521F;
-    --light-color:  #ffffff;
-    --font-color : #000;
-  
-   
-    /*POLICES*/
-  
-    /* Titres */
-    --title-font-family:'sansation';
-    --title-font-size: 1.2rem;
-  
-    /* Générique */
-    --main-font-size: 0.8rem;
-    --main-font-family: "Dosis", "Geneva", "Tahoma", sans-serif;
-  
-    /* Espace */
-    --spacing-little: 0.12rem;
-    --spacing-medium: 0.3rem;
-    --spacing-big: 0.75rem;
-  }
-  
-  /*========== CSS BALISE HTML==========*/
-  
-  * {
-    padding: 0rem;
-    margin: 0rem;
-  }
-  
-  body {
-    margin: 0rem;
-  
-  }
-  
-  h1 {
-    font-family: var(--title-font-family);
-    font-size: calc(1.5 * --title-font-size);
-    color: var(--dark-color);
-    margin: 2.5rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  h2 {
-    font-family: var(--title-font-family);
-    font-size: var(--title-font-size);
-    font-weight: 100;
-    color: var(--dark-color);
-    margin: 0.5rem;
-  }
-  
-  h3 {
-    font-family: var(--title-font-family);
-    font-size: var(--title-font-size);
-    color: var(--dark-color);
-    margin: 0.5rem;
-  }
-  
-  p {
-    font-family: var(--main-font-family);
-    font-size: var(--title-font-size);
-    color: var(--font-color);
-    margin: 0.5rem;
-  }
-  
-  button {
-    cursor: pointer;
-  
-    /* texte */
-    font-family: var(--title-font-family);
-    color: var(--light-color);
-    text-shadow: -0.13rem color var(--dark-color);
-    text-decoration: none;
-  
-    /* border */
-    border-radius: 2rem;
-  }
-  
-  ul,
-  li,
-  a {
-    text-decoration: none;
-    color: var(--dark-color);
-  }
+  /*COULEURS*/
+  --main-color: #1b3759;
+  --secondary-color: #daecf9;
+  --accent-color: #c2521f;
+  --light-color: #ffffff;
+  --font-color: #000;
+
+  /*POLICES*/
+
+  /* Titres */
+  --title-font-family: 'sansation';
+  --title-font-size: 1.2rem;
+
+  /* Générique */
+  --main-font-size: 0.8rem;
+  --main-font-family: 'Dosis', 'Geneva', 'Tahoma', sans-serif;
+
+  /* Espace */
+  --spacing-little: 0.12rem;
+  --spacing-medium: 0.3rem;
+  --spacing-big: 0.75rem;
+}
+
+/*========== CSS BALISE HTML==========*/
+
+* {
+  padding: 0rem;
+  margin: 0rem;
+}
+
+body {
+  margin: 0rem;
+}
+
+h1 {
+  font-family: var(--title-font-family);
+  font-size: calc(1.5 * --title-font-size);
+  color: var(--dark-color);
+  margin: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: var(--title-font-family);
+  font-weight: 100;
+  color: var(--dark-color);
+  margin: 0.5rem;
+}
+
+h3 {
+  font-family: var(--title-font-family);
+  font-size: var(--title-font-size);
+  color: var(--dark-color);
+  margin: 0.5rem;
+}
+
+p {
+  font-family: var(--main-font-family);
+
+  margin: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+
+  /* texte */
+  font-family: var(--title-font-family);
+  color: var(--light-color);
+  text-shadow: -0.13rem color var(--dark-color);
+  text-decoration: none;
+
+  /* border */
+  border-radius: 2rem;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}

@@ -11,7 +11,7 @@ export default function Header() {
     <div className={style.parentContainer}>
       <div className={style.welcomeContainer}>
         <h2 className={style.welcomeTitle}>
-          Bienvenu chez <span className={style.bienvenoSpan}></span> Bienveo
+          Bienvenu chez <span className={style.bienvenoSpan}>Bienveo</span>
         </h2>
         <div className={style.welcomeP}>
           <p>La solution à vos entretiens 100% inclusifs</p>
