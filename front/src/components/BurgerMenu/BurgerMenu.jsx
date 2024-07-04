@@ -21,7 +21,7 @@ const BurgerMenu = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static' sx={{ backgroundColor: '#DAECF9' }}>
-        <Toolbar>
+        <Toolbar sx={{ zIndex: 1300 }}>
           <IconButton
             size='large'
             edge='start'

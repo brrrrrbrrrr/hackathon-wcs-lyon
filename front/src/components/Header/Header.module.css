@@ -1,0 +1,71 @@
+.parentContainer {
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  justify-content: flex-end; /* Aligner les éléments à droite */
+  width: 100%; /* Largeur de la page */
+  padding: 5px; /* Ajouter un padding pour l'espace autour des éléments */
+  background-color: #daecf9;
+
+  overflow: visible;
+}
+
+.parent {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+.imageContainer {
+  padding-top: 5px;
+  width: 90%;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'un ombrage gris léger */
+  transition: box-shadow 0.3s ease-in-out; /* Transition pour un effet plus doux */
+
+  /* Exemple de padding pour toutes les divs contenant les images */
+  /* Vous pouvez ajouter d'autres styles généraux ici */
+}
+
+.div1 {
+  grid-area: 2 / 1 / 4 / 2;
+  margin-top: 10px;
+}
+.div2 {
+  grid-area: 4 / 1 / 6 / 2;
+  margin-top: 10px;
+}
+.div3 {
+  grid-area: 1 / 2 / 3 / 3;
+  margin-top: 10px;
+}
+.div4 {
+  grid-area: 3 / 2 / 5 / 3;
+  margin-top: 10px;
+}
+.div5 {
+  grid-area: 1 / 3 / 3 / 4;
+}
+.div6 {
+  grid-area: 3 / 3 / 5 / 4;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* S'assurer que les images couvrent bien leur espace */
+  border-radius: 10px;
+}
+
+.welcomeContainer {
+  margin-top: 100px;
+}
+
+.welcomeP {
+}
+
+.welcomeTitle {
+}

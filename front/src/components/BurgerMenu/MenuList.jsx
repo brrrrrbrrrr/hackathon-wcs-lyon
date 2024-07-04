@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 // MenuList.jsx
 import React from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 const MenuList = ({ open, onClose, anchorEl }) => {
-  const handleMenuItemClick = (event) => {
+  const handleMenuItemClick = () => {
     // Ajoutez ici la logique pour gérer les clics sur les éléments du menu
     onClose(); // Fermer le menu après avoir cliqué sur un élément
   };

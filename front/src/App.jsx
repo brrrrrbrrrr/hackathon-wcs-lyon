@@ -13,9 +13,9 @@ function App() {
 
   return (
     <>
-      {hideHeaderFooter === false && <Header />}
       <main>
-        {/* <BurgerMenu /> */}
+        <BurgerMenu />
+        {hideHeaderFooter === false && <Header />}
         <Outlet />
       </main>
       {hideHeaderFooter === false && <Footer />}
