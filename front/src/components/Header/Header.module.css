@@ -11,7 +11,7 @@
 }
 
 .parent {
-  width: 65%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr);
@@ -23,8 +23,7 @@
   padding-top: 5px;
   width: 90%;
   height: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'un ombrage gris léger */
-  transition: box-shadow 0.3s ease-in-out; /* Transition pour un effet plus doux */
+
 
   /* Exemple de padding pour toutes les divs contenant les images */
   /* Vous pouvez ajouter d'autres styles généraux ici */
@@ -58,19 +57,29 @@
   height: 100%;
   object-fit: cover; /* S'assurer que les images couvrent bien leur espace */
   border-radius: 10px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.548);
 }
 
 .welcomeContainer {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .welcomeP {
+  width: 80%;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10%;
+  font-size: medium;
 }
 
 .welcomeTitle {
-  font-family: "sansation";
+  font-family: 'sansation';
+  font-size: large;
 }
 
-.BienvenoSpan{
-  color: ;
+.bienvenoSpan {
+  color: var(--accent-color);
+  font-weight: bold;
 }

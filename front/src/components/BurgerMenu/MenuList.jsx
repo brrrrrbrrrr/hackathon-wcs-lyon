@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // MenuList.jsx
 
+import { Link } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -24,12 +25,21 @@ const MenuList = ({ open, onClose, anchorEl }) => {
         // Ajouter des marges pour ajuster la position du menu
         marginTop: '8px', // Décalage vers le bas
         marginRight: '20px',
-        padding:"0p" // Décalage vers la gauche
+        padding: '0p', // Décalage vers la gauche
       }}
     >
-      <MenuItem onClick={handleMenuItemClick}>Option 1</MenuItem>
-      <MenuItem onClick={handleMenuItemClick}>Option 2</MenuItem>
-      <MenuItem onClick={handleMenuItemClick}>Option 3</MenuItem>
+      <Link to='/'>
+        <MenuItem onClick={handleMenuItemClick}>Accueil</MenuItem>
+      </Link>
+      <Link to='/quizz'>
+        <MenuItem onClick={handleMenuItemClick}>Quizz</MenuItem>
+      </Link>
+      <Link to='/prompt'>
+        <MenuItem onClick={handleMenuItemClick}>Prompt IA</MenuItem>
+      </Link>
+      <Link to='/record'>
+        <MenuItem onClick={handleMenuItemClick}>Enregistrement</MenuItem>
+      </Link>
     </Menu>
   );
 };
