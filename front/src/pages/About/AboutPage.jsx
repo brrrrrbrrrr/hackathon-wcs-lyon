@@ -1,7 +1,7 @@
 import style from "../About/AboutPage.module.css"
 
 import corporate from "../../assets/images/team.jpg"
-// import ContactCard from "../../components/Contact/ContactCard"
+import Contact from "../../components/Contact/ContactCard"
 
 export default function About(){
 
@@ -95,9 +95,9 @@ export default function About(){
             </div>
           </section>
         </div>
-        {/* <div className={style.contact}>
-          <ContactCard />
-        </div> */}
+        <div className={style.contact}>
+          <Contact />
+        </div>
       </div>
     );
 }
