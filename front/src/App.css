@@ -79,9 +79,10 @@
   
     /* texte */
     font-family: var(--title-font-family);
-    color: var(--light-color);
+    color: var(--dark-color);
     text-shadow: -0.13rem color var(--dark-color);
     text-decoration: none;
+    background-color: var(--dark-color);
   
     /* border */
     border-radius: 2rem;
