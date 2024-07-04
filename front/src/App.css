@@ -55,6 +55,7 @@
   h2 {
     font-family: var(--title-font-family);
     font-size: var(--title-font-size);
+    font-weight: 100;
     color: var(--dark-color);
     margin: 0.5rem;
   }

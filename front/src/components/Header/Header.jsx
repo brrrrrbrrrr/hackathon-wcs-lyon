@@ -1,4 +1,3 @@
-import React from 'react';
 import style from '../Header/Header.module.css';
 import profil1 from '../../assets/images/profil1.jpg';
 import profil2 from '../../assets/images/profil2.jpg';
@@ -11,7 +10,9 @@ export default function Header() {
   return (
     <div className={style.parentContainer}>
       <div className={style.welcomeContainer}>
-        <h2 className={style.welcomeTitle}>Bienvenu chez Bienveo</h2>
+        <h2 className={style.welcomeTitle}>
+          Bienvenu chez <span className={style.bienvenoSpan}></span> Bienveo
+        </h2>
         <div className={style.welcomeP}>
           <p>La solution à vos entretiens 100% inclusifs</p>
         </div>
