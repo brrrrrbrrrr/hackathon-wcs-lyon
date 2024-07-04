@@ -1,9 +1,11 @@
-.h4-question.correct {
-  color: green;
+.h4Questions {
+  font-weight: lighter;
+  font-family: var(--main-font-family);
+  margin-bottom: 10px;
 }
 
-.h4-question.incorrect {
-  color: red;
+.score {
+  color: white;
 }
 
 .navigation_buttons {
@@ -16,7 +18,7 @@
 }
 
 .error_message {
-  color: red;
+  color: var(--accent-color);
   font-weight: bold;
 }
 
@@ -37,14 +39,14 @@
 }
 
 .question_left {
-  background-color: #f1f1f1;
+  background-color: var(--secondary-color);
   text-align: left;
   align-self: flex-start;
   margin-right: auto;
 }
 
 .question_right {
-  background-color: #e0e0e0;
+  background-color: var(--secondary-color);
   text-align: right;
   align-self: flex-end;
   margin-left: auto;
@@ -60,7 +62,13 @@
 
 .icons {
   display: flex;
+  justify-content: space-evenly;
   gap: 10px;
+}
+
+.buttonQuizz {
+  background-color: var(--main-color);
+  border-radius: 4px;
 }
 
 .navigation_buttons {
@@ -71,9 +79,13 @@
 
 .question_item {
   margin: 10px 0;
+  color: white;
+  font-weight: 100;
+  font-family: var(--main-font-family);
+  list-style: none;
+  border-bottom: 1px solid white;
 }
 
-.error_message {
-  color: red;
-  font-weight: bold;
+.non_inclusive {
+  text-decoration: line-through;
 }

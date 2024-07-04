@@ -1,10 +1,13 @@
-/* eslint-disable no-undef */
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import questions from '../Questions.js';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import DangerousIcon from '@mui/icons-material/Dangerous';
 import styles from '../../components/QuizzCard/QuizzCard.module.css';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { IconButton } from '@mui/material';
+import CheckIcon from '@mui/icons-material/Check';
 
 const QuizzCard = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -18,6 +21,7 @@ const QuizzCard = () => {
     const updatedValidationStates = [...validationStates];
     updatedValidationStates[currentQuestionIndex] = isValid;
     setValidationStates(updatedValidationStates);
+    nextQuestion();
   };
 
   const validateAnswers = () => {
@@ -55,8 +59,6 @@ const QuizzCard = () => {
     }
   };
 
-  const currentQuestion = questions[currentQuestionIndex];
-
   return (
     <div className={styles.question_container}>
       {score === null ? (
@@ -69,72 +71,73 @@ const QuizzCard = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.4 }}
                 className={`${styles.question} ${
                   index % 2 === 0 ? styles.question_left : styles.question_right
                 }`}
               >
-                <h4
-                  className={`h4-question ${
-                    validationStates[index] === true
-                      ? 'correct'
-                      : validationStates[index] === false
-                      ? 'incorrect'
-                      : ''
-                  }`}
-                >
-                  {question.question}
-                </h4>
+                <h4 className={styles.h4Questions}>{question.question}</h4>
                 {index === currentQuestionIndex && (
                   <div className={styles.icons}>
                     <DoneOutlineIcon
                       onClick={() => handleValidation(true)}
-                      style={{ cursor: 'pointer', color: 'green' }}
+                      style={{ cursor: 'pointer', color: '#1b3759' }}
                     />
                     <DangerousIcon
                       onClick={() => handleValidation(false)}
-                      style={{ cursor: 'pointer', color: 'red' }}
+                      style={{ cursor: 'pointer', color: '#c2521f' }}
                     />
                   </div>
                 )}
               </motion.div>
             ))}
           <div className={styles.navigation_buttons}>
-            <button
+            <IconButton
               onClick={prevQuestion}
               disabled={currentQuestionIndex === 0}
+              className={styles.buttonQuizz}
             >
-              Précédent
-            </button>
+              <ArrowBackIosIcon />
+            </IconButton>
             {currentQuestionIndex < questions.length - 1 ? (
-              <button onClick={nextQuestion}>Suivant</button>
+              <IconButton onClick={nextQuestion} className={styles.buttonQuizz}>
+                <ArrowForwardIosIcon />
+              </IconButton>
             ) : (
-              <button onClick={validateAnswers}>Valider les réponses</button>
+              <IconButton
+                onClick={validateAnswers}
+                className={styles.buttonQuizz}
+              >
+                <CheckIcon />
+              </IconButton>
             )}
           </div>
         </AnimatePresence>
       ) : (
         <div>
-          <p>
+          <p className={styles.score}>
             Score: {score} / {questions.length}
           </p>
           <ul>
             {questions.map((el, index) => (
-              <li key={index} className={styles.question_item}>
-                <h4
-                  className={`h4-question ${
-                    validationStates[index] === true
-                      ? 'correct'
-                      : validationStates[index] === false
-                      ? 'incorrect'
-                      : ''
-                  }`}
-                >
-                  {el.question}
-                </h4>
-                {incorrectQuestions.includes(index) && (
-                  <p className={styles.error_message}>Réponse incorrecte</p>
-                )}
+              <li
+                key={index}
+                className={`${styles.question_item} ${
+                  el.status.includes('Non inclusive')
+                    ? styles.non_inclusive
+                    : ''
+                }`}
+              >
+                <h4 className={styles.h4Questions}>{el.question}</h4>
+                <p>
+                  {el.status}
+                  {incorrectQuestions.includes(index) && (
+                    <span className={styles.error_message}>
+                      {' '}
+                      - Vous aviez sélectionné le contraire.
+                    </span>
+                  )}
+                </p>
               </li>
             ))}
           </ul>
