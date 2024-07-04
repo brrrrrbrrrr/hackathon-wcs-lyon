@@ -1,7 +1,15 @@
-import React from 'react';
+import style from "../Footer/Footer.module.css"
+import { Link } from "react-router-dom"
 
-const Footer = (props) => {
-  return <div></div>;
-};
+export default function Footer(){
 
-export default Footer;
+    return (
+      <div className={style.containerFooter}>
+        <div className={style.link}>
+          <Link to="/">Contact </Link>
+          <Link to="/">A propos</Link>
+        </div>
+        <p className={style.footerText}>Copyright © 2024</p>
+      </div>
+    );
+}

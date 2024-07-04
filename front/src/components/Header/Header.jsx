@@ -1,7 +1,17 @@
-import React from 'react';
+import style from "../Header/Header.module.css"
 
-const Header = (props) => {
-  return <div></div>;
-};
+import BurgerMenu from "../BurgerMenu/BurgerMenu"
 
-export default Header;
+
+
+export default function Header(){
+
+    return(
+
+        <div className={style.containerHeader}>
+            <BurgerMenu className={style.menu}/>
+            <img className={style.logo} src="/" />
+
+        </div>
+    )
+}
