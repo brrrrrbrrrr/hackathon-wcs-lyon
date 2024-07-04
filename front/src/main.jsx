@@ -8,6 +8,7 @@ import Home from '../src/pages/Home/HomePage.jsx';
 import Articles from '../src/pages/Articles/ArticlesPage.jsx';
 import About from '../src/pages/About/AboutPage.jsx';
 import Quizz from '../src/pages/quizz/QuizzPage.jsx';
+import Prompt from '../src/components/Prompt.jsx'
 import Data from '../src/pages/Data/DataPage.jsx';
 
 const router = createBrowserRouter([
@@ -15,31 +16,34 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
 
       {
-        path: '/articles',
+        path: "/articles",
         element: <Articles />,
       },
 
       {
-        path: '/about',
+        path: "/about",
         element: <About />,
       },
 
       {
-        path: '/quizz',
+        path: "/quizz",
         element: <Quizz />,
       },
 
       {
-        path: '/data',
-        element: <Data />,
+        path: "/prompt",
+        element: <Prompt />,
       },
 
-      
+      {
+        path: "/data",
+        element: <Data />,
+      },
     ],
   },
 ]);
