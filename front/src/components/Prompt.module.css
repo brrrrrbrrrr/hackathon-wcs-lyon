@@ -1,0 +1,118 @@
+.promptContainerIa {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.promptContainerIa h2 {
+  padding: 2rem 0 0 0;
+  color: var(--light-color);
+  padding-right: 7rem;
+  font-family: var(--main-font-family);
+  font-weight: lighter;
+  font-size: 1.2rem;
+  margin-left: -4rem;
+}
+
+.promptContainerIa h3 {
+  padding: 0.5rem 5rem 1.5rem 1rem;
+  color: var(--light-color);
+  font-family: var(--main-font-family);
+  font-weight: lighter;
+  font-size: 1.2rem;
+  margin-left:0;
+}
+
+.promptContainerIa strong {
+  background-color: var(--accent-color);
+  border: 0 4rem;
+  padding: 0 0.3rem;
+}
+
+.PromptCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color);
+  margin-top: 0.3rem;
+  width: 80vw;
+  height: 38vh; 
+  padding-top:1.5rem;
+  padding-bottom: 4rem;
+  border-radius: 0.8rem;
+  align-items: center;
+  background-color: var(--light-color);
+
+}
+
+/* Presentaion of chat bot */
+
+.promptContainerIa p {
+  color: var(--light-color);
+  font-family: var(--main-font-family);
+  background-color: var(--main-color);
+  width: 53vw;
+  padding: 0.8rem 1rem;
+  font-weight: 400;
+  font-size: 1.1rem;;
+  margin: 0;
+}
+.p1{
+    border-radius: 0.8em;
+
+}
+
+/* QUESTION */
+.promptContainerIa label {
+    font-family: var(--main-font-family);
+    background-color: var(--main-color);
+    color: var(--light-color);
+    width: 40vw;
+    padding: 0.8rem 1rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0.3rem 2.8rem 0 0;
+    border-radius: 0.8em;
+  }
+
+.promptContainerIa ::placeholder {
+  color: var(--main-color);
+  font-size: 1rem;
+  font-family: var(--main-font-family);
+
+
+}
+
+/* REPONSE */
+.promptContainerIa input {
+  padding: 0.7rem 2rem;
+  width: 46vw;
+  border: var(--main-color) 1px solid;
+  border-radius: 1rem;
+  background-color: var(--dark-color);  
+  margin: 4rem 0 0 1.5rem;
+color: var(--light-color);
+  text-align: center;
+}
+
+/* BUTTON */
+.promptContainerIa button {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+  font-size: 1.3rem;
+  font-family: var(--main-font-family);
+  width: 80vw;
+  padding: 0.5rem 6rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.promptContainerIa button :hover {
+  background-color: var(--light-color);
+  color: var(--main-color);
+}
