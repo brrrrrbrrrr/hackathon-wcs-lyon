@@ -28,7 +28,7 @@ export default function Contact(){
             </li>
           </ul>
         </form>
-        <div className={style.button}>
+        <div className={style.submit}>
           <button type="submit">Envoyer le message</button>
         </div>
       </div>

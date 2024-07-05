@@ -1,0 +1,42 @@
+.picture{
+    height:60vh;
+    align-content: flex-end;
+    
+}
+
+.intro{
+    display: flex;
+    flex-direction: row-reverse;
+    margin:2vh;
+}
+
+.mission{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:5vh;
+}
+
+.title{
+    color:var(--accent-color);
+}
+
+.subtitle{
+    color:var(--accent-color);
+}
+
+h2{
+    margin-top: 5vh;
+}
+
+.description{
+
+    font-size: 2rem;
+    margin:50vh;
+    padding-bottom:10rem;
+
+}
+
+.value{
+   text-align: start;
+}

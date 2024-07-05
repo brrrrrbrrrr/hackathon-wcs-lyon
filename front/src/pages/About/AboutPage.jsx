@@ -8,57 +8,51 @@ export default function About(){
     return (
       <div className={style.containerabout}>
         <h1 className={style.title}>A propos</h1>
-        <img src={corporate} />
-
-        <div className={style.description}>
-          <section>
+        <div className={style.intro}>
+          <img className={style.picture} src={corporate} />
+          <section className={style.mission}>
             <h2 className={style.subtitle}>Notre mission</h2>
             <p className={style.descrition}>
               Chez Bienvéo, nous croyons en un monde du travail plus inclusif et
               équitable. Nous avons donc créé une application RH spécialement
               conçue pour révolutionner les processus d entretien d embauche.
               Notre objectif est de permettre aux entreprises de mener des
-              entretiens véritablement inclusifs, en mettant l accent sur
-              l équité, la diversité et l inclusion.
+              entretiens véritablement inclusifs, en mettant l accent sur l
+              équité, la diversité et l inclusion.
             </p>
           </section>
+        </div>
+
+        <div className={style.texte}>
           <section>
             <h2 className={style.subtitle}>Pourquoi Bienvéo?</h2>
             <p className={style.descrition}>
-              Le nom Bienvéo est le reflet de notre vision et de nos valeurs.
-              Il est composé de deux parties : Bien : Ce terme français
-              signifie bon ou bien, soulignant notre engagement envers les
-              bonnes pratiques et lamélioration continue des processus RH.
-              Véo : Dérivé du verbe espagnol ver (voir), veo signifie je
-              vois. Cela symbolise notre engagement à voir au-delà des
-              apparences, des préjugés et des biais inconscients, pour mieux
-              comprendre et valoriser chaque candidat. Ensemble, Bienvéo
-              incarne notre mission : offrir une vision claire et positive des
-              talents diversifiés et favoriser un recrutement plus juste et plus
-              humain.
+              Le nom Bienvéo est le reflet de notre vision et de nos valeurs. Il
+              est composé de deux parties : Bien : Ce terme français signifie
+              bon ou bien, soulignant notre engagement envers les bonnes
+              pratiques et lamélioration continue des processus RH. Véo : Dérivé
+              du verbe espagnol ver (voir), veo signifie je vois. Cela symbolise
+              notre engagement à voir au-delà des apparences, des préjugés et
+              des biais inconscients, pour mieux comprendre et valoriser chaque
+              candidat. Ensemble, Bienvéo incarne notre mission : offrir une
+              vision claire et positive des talents diversifiés et favoriser un
+              recrutement plus juste et plus humain.
             </p>
           </section>
-          <section>
+          <section className={style.value}>
             <h2 className={style.subtitle}>Nos valeurs</h2>
             <div className={style.descrition}>
               <p className={style.firstvalue}>
-                <str>Inclusion</str> : Nous nous engageons à créer des outils
-                qui favorisent l inclusion et la diversité dans le processus de
-                recrutement. Innovation : Nous innovons constamment pour offrir
-                des solutions RH avancées, garantissant des entretiens
-                équitables et efficaces. Bienveillance : Nous plaçons la
-                bienveillance au cœur de nos interactions, assurant un
-                traitement respectueux et humain de chaque candidat.
+                Inclusion: Nous nous engageons à créer des outils qui favorisent
+                l inclusion et la diversité dans le processus de recrutement.
               </p>
               <p className={style.secondvalue}>
-                <str>Innovation :</str>Nous innovons constamment pour offrir des
+                Innovation :Nous innovons constamment pour offrir des
                 solutions RH avancées, garantissant des entretiens équitables et
-                efficaces.Bienveillance : Nous plaçons la bienveillance au cœur
-                de nos interactions, assurant un traitement respectueux et
-                humain de chaque candidat.
+                efficaces.
               </p>
               <p className={style.thirdvalue}>
-                <str>Bienveillance :</str>Nous plaçons la bienveillance au cœur
+                Bienveillance :Nous plaçons la bienveillance au cœur
                 de nos interactions, assurant un traitement respectueux et
                 humain de chaque candidat.
               </p>
@@ -74,8 +68,8 @@ export default function About(){
                 structurer les entretiens de manière équitable. Évaluation sans
                 biais : Techniques et algorithmes pour minimiser les biais
                 inconscients. Feedback constructif : Outils pour offrir des
-                retours détaillés et constructifs aux candidats. Formation à
-                l inclusivité : Modules de formation pour recruteurs sur les
+                retours détaillés et constructifs aux candidats. Formation à l
+                inclusivité : Modules de formation pour recruteurs sur les
                 meilleures pratiques en matière d inclusivité et de diversité.
               </p>
             </div>
