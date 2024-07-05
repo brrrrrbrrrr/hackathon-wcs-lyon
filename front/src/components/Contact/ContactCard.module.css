@@ -1,0 +1,42 @@
+.containercontact{
+    padding:2rem;
+    background-color: var(--secondary-color);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.title{
+    color:var(--accent-color);
+    padding:0;
+}
+
+.formulaire{
+    align-items: center;
+    background-color: var(--secondary-color);
+    display:flex;
+    flex-direction: column;
+}
+
+.champs{
+    display:flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    width: 70rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border-color: var(--dark-color);
+    margin:1rem;
+}
+
+textarea{
+    height: 5rem;
+}
+
+.submit{
+    background-color: var(--dark-color);
+}
+
