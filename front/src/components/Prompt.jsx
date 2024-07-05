@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import styles from '../components/Prompt.module.css'
 import postQuestion from '../services/openAi';
 
-const Prompt = (props) => {
+const Prompt = () => {
   const [question, setQuestion] = useState('');
   const [response, setReponse] = useState('');
 
@@ -18,10 +19,15 @@ const Prompt = (props) => {
     setQuestion('');
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='questionInput'>Posez votre question :</label>
+    <div className={styles.promptContainerIa}>
+      <h2>Bonjour,</h2>
+      <h3>Je suis <strong> Alex</strong> votre guide</h3>
+      
+      <form onSubmit={handleSubmit} className={styles.PromptCard}>
+      <p className={styles.p1}> Besoin d'un petit coup de pouce ? </p>
+        <label htmlFor='questionInput'>Vous souhaitez savoir si vous votre question est appropriée pour un entretien</label>
         <input
+        placeholder='Posez-votre question ici '
           type='text'
           id='questionInput'
           value={question}
@@ -31,7 +37,7 @@ const Prompt = (props) => {
         <button type='submit'>Envoyer</button>
       </form>
       {response && <p>{response.content} </p>}
-    </div>
+      </div>
   );
 };
 

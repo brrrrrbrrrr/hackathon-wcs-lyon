@@ -6,7 +6,7 @@ import App from './App.jsx';
 import './index.css';
 
 import Home from '../src/pages/Home/HomePage.jsx';
-import Articles from '../src/pages/Articles/ArticlesPage.jsx';
+import Articles from '../src/components/ArticleCard/ArticleCard.jsx';
 import About from '../src/pages/About/AboutPage.jsx';
 import Quizz from '../src/pages/quizz/QuizzPage.jsx';
 import Prompt from '../src/components/Prompt.jsx';
