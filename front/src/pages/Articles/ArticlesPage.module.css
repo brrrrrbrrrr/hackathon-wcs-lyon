@@ -1,3 +1,4 @@
-.backgroundArticles{
-    background-color: var(--secondary-color);
+.backgroundArticles strong {
+    color: var(--accent-color);
+    font-family : var(--title-font-family);
 }
