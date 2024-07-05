@@ -1,0 +1,16 @@
+.containerFooter{
+    border-top:1rem;
+    border-top: 1px solid;
+    border-top-color: var(--dark-color);
+}
+.link{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    font-family: 'Dosis';
+}
+
+p{
+    display:flex;
+    justify-content: center;
+}
