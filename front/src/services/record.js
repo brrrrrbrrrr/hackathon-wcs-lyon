@@ -33,7 +33,9 @@ const startRecording = (
             setResultText(data);
             console.log(data);
           })
-          .catch((error) => console.error('Error uploading audio:', error));
+          .catch((error) => {
+            console.error('Error uploading audio:', error);
+          });
       };
 
       setRecording(true);

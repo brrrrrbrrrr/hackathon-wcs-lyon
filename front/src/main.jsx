@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Record from './components/Record.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css';
@@ -8,7 +9,7 @@ import Home from '../src/pages/Home/HomePage.jsx';
 import Articles from '../src/components/ArticleCard/ArticleCard.jsx';
 import About from '../src/pages/About/AboutPage.jsx';
 import Quizz from '../src/pages/quizz/QuizzPage.jsx';
-import Prompt from '../src/components/Prompt.jsx'
+import Prompt from '../src/components/Prompt.jsx';
 import Data from '../src/pages/Data/DataPage.jsx';
 
 const router = createBrowserRouter([
@@ -16,32 +17,36 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
 
       {
-        path: "/articles",
+        path: '/articles',
         element: <Articles />,
       },
 
       {
-        path: "/about",
+        path: '/about',
         element: <About />,
       },
 
       {
-        path: "/quizz",
+        path: '/quizz',
         element: <Quizz />,
       },
 
       {
-        path: "/prompt",
+        path: '/prompt',
         element: <Prompt />,
+      },
+      {
+        path: '/record',
+        element: <Record />,
       },
 
       {
-        path: "/data",
+        path: '/data',
         element: <Data />,
       },
     ],
